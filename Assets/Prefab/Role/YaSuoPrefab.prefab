@@ -3759,6 +3759,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5317bdc96718b44ca0af57c9f41b1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveAudio:
+  - {fileID: 8300000, guid: 980bcc83c17e2d942b652b8d53b0c728, type: 3}
+  - {fileID: 8300000, guid: e68f99ba2d1a6a34a9aa07b876a1ab87, type: 3}
+  - {fileID: 8300000, guid: 038c2b8c96e14a1448a9baa8b8c3d863, type: 3}
+  - {fileID: 8300000, guid: aff4cc2123eb71441aa5bf403287d1ef, type: 3}
+  - {fileID: 8300000, guid: 1febe83feae044149a013403b0d50310, type: 3}
+  - {fileID: 8300000, guid: dc9596360b11b1c469a22014cc168c27, type: 3}
+  - {fileID: 8300000, guid: 250495698add704428e3b1c747b50c7f, type: 3}
 --- !u!114 &6467808631139324425
 MonoBehaviour:
   m_ObjectHideFlags: 0

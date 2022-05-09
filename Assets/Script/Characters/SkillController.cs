@@ -110,7 +110,7 @@ public class SkillController : Role
             QueryTriggerInteraction queryTriggerInteraction= QueryTriggerInteraction.UseGlobal);
     */
     public Transform rayTransform;
-    RaycastHit[] m_Results = new RaycastHit[10];//随便存多少个吧
+    RaycastHit[] m_Results = new RaycastHit[20];//随便存多少个吧
     bool isQHit;//当前Q是否命中敌人
 
     private GameObject q2WindEffect;

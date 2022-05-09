@@ -6,7 +6,7 @@ public class GameManager : Singleton<GameManager>
 {
     List<GameObject> zombieList;
     public int maxZombieCount = 10; //最多场景内同一时间 有多少个僵尸
-    public float intervalTime = 3.0f; //间隔多长时间创建僵尸
+    public float intervalTime = 5.0f; //间隔多长时间创建僵尸
 
     public GameObject zombiePrefab;
 
@@ -42,8 +42,8 @@ public class GameManager : Singleton<GameManager>
     void CreateZombie()
     {
         //随机位置生成僵尸
-        float x = Random.Range(1, 10);
-        float z = Random.Range(1, 10);
+        float x = Random.Range(1, 5);
+        float z = Random.Range(1, 5);
         Vector3 point = new Vector3(x,0f,z);
         GameObject zombie = Instantiate(zombiePrefab,point,Quaternion.identity);
         zombieList.Add(zombie);

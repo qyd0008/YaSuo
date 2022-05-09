@@ -19,7 +19,7 @@ public class ZombieController : Role
     // Start is called before the first frame update
     void Start()
     {
-        enemyStates = EnemyStates.IDLE;
+        enemyStates = EnemyStates.CHASE;
         attackTarget = FindObjectOfType<PlayerController>().gameObject;
     }
 

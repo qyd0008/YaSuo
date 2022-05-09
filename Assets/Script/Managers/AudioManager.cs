@@ -36,12 +36,18 @@ public class AudioManager : Singleton<AudioManager>
 
     public void PlayRandomYaSuoSound(List<AudioClip> list)
     {
+        SoundPlayer.Stop();
         if (list != null && list.Count > 0)
         {
             int range = Random.Range(0,list.Count);
             SoundPlayer.clip = list[range];
             SoundPlayer.PlayOneShot(list[range]);
         }
+    }
+
+    public bool IsPlaying()
+    {
+        return SoundPlayer.isPlaying;
     }
 
     //播放剑音效

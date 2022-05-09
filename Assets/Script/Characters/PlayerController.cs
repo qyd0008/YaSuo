@@ -6,6 +6,9 @@ using UnityEngine;
 // public enum PlayerStates {IDLE,NORMAL_RUN,S}
 public class PlayerController : Role
 {
+    public List<AudioClip> moveAudio;
+    private float moveAudioTime = 8f;
+    private float passMoveAudioTime;
     private GameObject attackTarget;
 
     bool isDrawSword;//剑是否是拔出状态
@@ -39,6 +42,7 @@ public class PlayerController : Role
     void Update()
     {
         switchAnimation();
+        passMoveAudioTime -= Time.deltaTime;
     }
 
     //Animation
@@ -56,6 +60,12 @@ public class PlayerController : Role
     {
         StopAllCoroutines();
         if (IsDeath()) return;
+
+        if (!isDrawSword && !AudioManager.Instance.IsPlaying() && passMoveAudioTime<=0)
+        {
+            passMoveAudioTime = moveAudioTime;
+            AudioManager.Instance.PlayRandomYaSuoSound(moveAudio);
+        }
 
         StartCoroutine(MoveToGroundTarget(target));
     }
